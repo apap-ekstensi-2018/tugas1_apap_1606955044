@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>SI Kemahasiswaan</title>
+
+		<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+		<script src="jQuery-3.2.1/jquery-3.2.1.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div align="center">
+		<div th:replace="fragments/fragment :: header"></div>
+			<h1>Sistem Informasi Kemahasiswaan</h1>
+			<p> Selamat datang di Sistem Informasi Kemahasiswaan</p>
+		</div>
+		<hr/>
+		<div class="container">
+			<h2>Lihat Data Mahasiswa Berdasarkan NPM</h2>
+			<form class="form-horizontal" action="/mahasiswa" method="get">
+			    <div class="form-group">
+					<label for="input_npm">Masukan Nomor Pokok Mahasiswa</label>
+					<input type="text" placeholder="Input NPM" class="form-control" name="npm"/>
+				</div>	    
+			    <div class="col-sm-offset-2 col-sm-10">
+			        <button type="submit" class = "btn btn-primary" >Lihat</button>
+			    </div>
+			</form>
+		</div>
+		<div th:replace="fragments/fragment :: footer"></div>
+	</body>
+</html>
